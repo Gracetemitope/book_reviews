@@ -24,7 +24,6 @@
   <div class="container">
     <a class="navbar-brand" href="#">
     R 0'cLoCk
-          <%# <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-eI6nBtuYpz965g-GOZ_1TakuPC-B8-HY9g&usqp=CAU" alt="" class="logo"> %>
         </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -50,10 +49,28 @@
       </ul>
 
     </div>
-      <%= link_to 'Sign in', @review %> |
-       <%= link_to 'Register', reviews_path %>
+     <% if user_signed_in? %>
+                                     <strong class="button">    <%= current_user.name%></strong>
+|
+      <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "button is_danger" %>
+                        <% else %>
+                                                                        <%= link_to "Log In", new_user_session_path, class: "button is_primary" %>
+|
+            <%= link_to "Register", new_user_registration_path, class: "button is_primary" %> 
+                                                <% end %>
   </div>
 </nav>
+<footer>
+  <a class="navbar-brand footer-logo" href="#">
+    R 0'cLoCk
+        </a>
+      <a>Privacy Policy Terms & Conditions</a>
+      <a>Copyright 2021, All right reserved</a>
+      <div>
+      <p>Connect with us</p>
+      
+      <div>
+</footer>
     <%= yield %>
   </body>
 </html>
