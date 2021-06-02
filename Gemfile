@@ -27,6 +27,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'figaro'
 gem 'devise', '~> 4.8'
 gem 'bootstrap', '>= 1.4.2', require: false
+gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
 # Reduces boot times through caching; required in config/boot.rb
 
 
