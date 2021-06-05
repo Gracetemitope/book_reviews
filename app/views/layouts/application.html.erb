@@ -4,7 +4,10 @@
     <title>BookReviews</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    
+				
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -60,6 +63,40 @@
                                                 <% end %>
   </div>
 </nav>
+<%# <div class="owl-carousel">
+  <div>
+  <img  src="https://images.unsplash.com/photo-1532012197267-da84d127e765?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Ym9va3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" class="hero-image">
+  </div>
+  <div>
+    <img  src="https://images.unsplash.com/photo-1532012197267-da84d127e765?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Ym9va3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" class="hero-image">
+</div>
+  <div>
+    <img  src="https://images.unsplash.com/photo-1532012197267-da84d127e765?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Ym9va3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" class="hero-image">
+</div>
+</div> %>
+<%# <%= content_for(:after_js) do %> %>
+<%# <script>
+$(document).ready(function(){
+  $('.owl-carousel').owlCarousel({
+    stagePadding: 50,
+  loop: true,
+  margin:10,
+  responsive:{
+    0:{
+      items:1
+     },
+    600:{
+     items:3
+     }
+   }
+
+  });
+});
+</script> %>
+<%# <% end %> %>
+
     <%= yield %>
+    <%# <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%# <%= yield :after_js %> %>
   </body>
 </html>

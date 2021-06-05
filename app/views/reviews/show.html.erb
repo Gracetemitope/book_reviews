@@ -1,8 +1,5 @@
 <p id="notice"><%= notice %></p>
-<%reviews.each do |review| %>
-
-<% end %>
-
-
+      <p><%= @review.title %></p>
+      <p> <%= @review.text %></p>
 <%= link_to 'Edit', edit_review_path(@review) %> |
 <%= link_to 'Back', reviews_path %>

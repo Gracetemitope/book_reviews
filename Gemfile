@@ -28,6 +28,9 @@ gem 'bootstrap', '>= 1.4.2', require: false
 gem 'devise', '~> 4.8'
 gem 'figaro'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.7'
+gem 'flex-slider-rails'
+
+
 # Reduces boot times through caching; required in config/boot.rb
 
 group :development, :test do

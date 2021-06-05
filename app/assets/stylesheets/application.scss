@@ -10,9 +10,10 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
+
+ *= require flexslider
  */
+ 
 
  @import "bootstrap/scss/bootstrap";
  @import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
@@ -125,4 +126,8 @@ caption {
  .category-book {
    width: 20rem;
    height: inherit;
+ }
+ .hero-image {
+   width: 100%;
+   height: 16rem;
  }
