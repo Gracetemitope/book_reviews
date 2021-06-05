@@ -55,6 +55,8 @@ $(window).load(function() {
       
       <p><%= review.title %></p>
       <p> <%= review.text %></p>
+            <%= vote_or_unvote_btn(review)%>
+
       <tr>
         <td><%= link_to 'Show', review %></td>
         <td><%= link_to 'Edit', edit_review_path(review) %></td>

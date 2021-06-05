@@ -6,64 +6,25 @@ class VotesController < ApplicationController
     @votes = Vote.all
   end
 
-  # GET /votes/1 or /votes/1.json
-  def show
-  end
-
-  # GET /votes/new
-  def new
-    @vote = Vote.new
-  end
-
-  # GET /votes/1/edit
-  def edit
-  end
-
-  # POST /votes or /votes.json
   def create
-    @vote = Vote.new(vote_params)
-
-    respond_to do |format|
-      if @vote.save
-        format.html { redirect_to @vote, notice: "Vote was successfully created." }
-        format.json { render :show, status: :created, location: @vote }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @vote.errors, status: :unprocessable_entity }
-      end
+    @vote = current_user.votes.new(review_id: params[:review_id])
+    
+    if @like.save
+      redirect_to posts_path, notice: 'You voted a post.'
+    else
+      redirect_to posts_path, alert: 'You cannot like this post.'
     end
   end
 
-  # PATCH/PUT /votes/1 or /votes/1.json
-  def update
-    respond_to do |format|
-      if @vote.update(vote_params)
-        format.html { redirect_to @vote, notice: "Vote was successfully updated." }
-        format.json { render :show, status: :ok, location: @vote }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @vote.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /votes/1 or /votes/1.json
   def destroy
-    @vote.destroy
-    respond_to do |format|
-      format.html { redirect_to votes_url, notice: "Vote was successfully destroyed." }
-      format.json { head :no_content }
+    vote = Vote.find_by(id: params[:id], user: current_user, post_id: params[:review_id])
+    if like
+      like.destroy
+      redirect_to posts_path, notice: 'You unvote a review.'
+    else
+      redirect_to reviews_path, alert: 'You cannot unvote review.'
     end
   end
-
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_vote
-      @vote = Vote.find(params[:id])
-    end
-
-    # Only allow a list of trusted parameters through.
-    def vote_params
-      params.fetch(:vote, {})
-    end
 end
+
+  
