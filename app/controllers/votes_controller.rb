@@ -1,5 +1,5 @@
 class VotesController < ApplicationController
-  before_action :set_vote, only: %i[ show edit update destroy ]
+  before_action :set_vote, only: %i[show edit update destroy]
 
   # GET /votes or /votes.json
   def index
@@ -8,7 +8,7 @@ class VotesController < ApplicationController
 
   def create
     @vote = current_user.votes.new(review_id: params[:review_id])
-    
+
     if @like.save
       redirect_to posts_path, notice: 'You voted a post.'
     else
@@ -26,5 +26,3 @@ class VotesController < ApplicationController
     end
   end
 end
-
-  

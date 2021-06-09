@@ -2,6 +2,7 @@
       <p><%= @review.title %></p>
       <p> <%= @review.text %></p>
                   <%= vote_or_unvote_btn(@review)%>
+                  <%= image_tag @review.image_url if @review.image %>
 
 <%= link_to 'Edit', edit_review_path(@review) %> |
 <%= link_to 'Back', reviews_path %>
