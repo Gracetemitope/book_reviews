@@ -1,5 +1,39 @@
 <h1>New Article</h1>
+<%= form_with(model: @review, local: true) do |form| %>
+  <% if @review.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h2>
 
-<%= render 'form', article: @review %>
+      <ul>
+    
+        <% @review.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+  <div class="field">
+    <%= form.label :text %>
+    <%= form.text_field :text %>
+  </div>
+   <div class="field">
+        <%# <%= form.collection_select :category_id, Category.all, :id, :name, {prompt: "Select Category"}, required: true %> %>
+    </div>
+  <div class="field">
+   <%= form.label :image %>
+  <%= form.file_field :image, required: true %>
+        </div>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+<p class="text-center">If there are no categories to select from, kindly create a new category &#x1F449;
+    <%= link_to 'here', new_category_path, class: 'base-color text-decoration-none' %></p>
+
+<%# <%= render 'form', article: @review %> %>
 
 <%= link_to 'Back', reviews_path %>

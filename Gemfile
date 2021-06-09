@@ -28,7 +28,9 @@ gem 'bootstrap', '>= 1.4.2', require: false
 gem 'devise', '~> 4.8'
 gem 'figaro'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.7'
-gem 'flex-slider-rails'
+gem 'image_processing', '~> 1.2'
+gem 'shrine', '~> 3.3'
+gem "shrine-cloudinary", "~> 1.1"
 
 
 # Reduces boot times through caching; required in config/boot.rb
@@ -36,6 +38,7 @@ gem 'flex-slider-rails'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+   gem 'dotenv-rails'
 end
 
 group :development do
