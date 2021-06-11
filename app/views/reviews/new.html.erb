@@ -12,10 +12,14 @@
       </ul>
     </div>
   <% end %>
-<div class="field">
+  <div class="field">
     <%= form.label :title %>
     <%= form.text_field :title %>
   </div>
+<div class="field">
+    <%= form.label :author %>
+    <%= form.number_field :author_id %>
+   </div>
   <div class="field">
     <%= form.label :text %>
     <%= form.text_field :text %>

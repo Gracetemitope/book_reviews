@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true, length: { minimum: 3, maximum: 30, case_sensitive: false }
 
+  has_many :reviews, foreign_key: :author_id, dependent: :destroy
+  has_many :votes, dependent: :destroy
   def email_required?
     false
   end
