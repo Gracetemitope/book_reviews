@@ -11,7 +11,6 @@ class ReviewsController < ApplicationController
   # GET /reviews/1 or /reviews/1.json
   def show
     @review = Review.find(params[:id])
-
    end
 
   # GET /reviews/new
@@ -26,9 +25,6 @@ class ReviewsController < ApplicationController
   def create
     # @review = @current_user.reviews.build(review_params)
     @review = current_user.reviews.new(review_params)
-
-    # @review = Review.new(review_params)
-
     
     respond_to do |format|
       if @review.save

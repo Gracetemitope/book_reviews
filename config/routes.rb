@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   root to: "reviews#index"
   devise_for :users
-
-
   resources :reviews 
   resources :votes
   resources :categories, only: %i[index show new create edit update]

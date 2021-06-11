@@ -56,6 +56,8 @@ $(window).load(function() {
       <p><%= review.title %></p>
       <p> <%= review.text %></p>
             <%= vote_or_unvote_btn(review)%>
+        <%= image_tag review.image_url if review.image %>
+
 
       <tr>
         <td><%= link_to 'Show', review %></td>
