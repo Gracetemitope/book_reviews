@@ -3,6 +3,8 @@ class CategoriesController < ApplicationController
 
   # GET /categories or /categories.json
   def index
+    @featured = Review.find(featured) if Review.exists?(id: featured)
+
     @categories = Category.all
   end
 
@@ -56,7 +58,10 @@ class CategoriesController < ApplicationController
     end
   end
 
-  private
+  def featured
+    highest = Vote.group(:review_id).order('count_id DESC').limit(1).count(:id)
+    highest.keys.first
+  end
 
   # Only allow a list of trusted parameters through.
   def category_params
