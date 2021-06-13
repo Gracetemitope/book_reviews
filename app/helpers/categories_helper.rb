@@ -1,5 +1,4 @@
 module CategoriesHelper
-
   def categories_display
     content = ''
     @categories.each do |category|
