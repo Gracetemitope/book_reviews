@@ -1,0 +1,10 @@
+<section class="featured">
+    <div style="<%= featured_img(@featured.image_url) %>" class="featured-img-height background-img position-relative">
+      <div class="featured-item position-absolute">
+        <h4 class="featured-heading fw-bolder">
+         <%= link_to @featured.title, @featured, class: 'primary-color text-decoration-none' %>
+        </h4>
+        <p class="featured-snippet text-white"><%= @featured.text %></p>
+      </div>
+    </div>
+</section>
