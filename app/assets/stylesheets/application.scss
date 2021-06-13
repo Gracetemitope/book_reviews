@@ -21,19 +21,21 @@ $white: white;
 $black: black;
 $primary-color: #eb712f;
 
-.navbar {
-  margin-bottom: 0;
-  background: $white;
-  box-shadow: 1px 1px 1px 1px lightgrey;
-}
-.nav-item {
-  color: $black;
-}
 body {
   background: $white;
   color: $black;
   font-family: "Merriweather", sans-serif;
 }
+
+.navbar {
+  margin-bottom: 5px;
+  background: $white;
+  box-shadow: 2px 2px 2px 2px lightgrey;
+}
+.nav-item {
+  color: $black;
+}
+
 h1,
 h2 {
   font-weight: bold;
@@ -42,11 +44,11 @@ p {
   font-size: 16px;
   color: $black;
 }
-a:visited {
-  color: $primary-color;
+a {
+  color: grey;
 }
 .link {
-  color: $black;
+  color: $primary-color;
 }
 .btn-primary {
   color: $white;
@@ -134,8 +136,11 @@ h1 {
   color: $primary-color;
 }
 .nav-item {
-  color: #36454f;
+    color: #36454f;
 
+}
+.nav-link {
+  color: grey;
 }
 .navbar-nav .nav-item .nav-link:hover {
   color: $primary-color;
