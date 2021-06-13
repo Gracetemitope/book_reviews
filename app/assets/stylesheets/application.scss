@@ -11,121 +11,180 @@
  * It is generally better to create a new file per style scope.
  *
  */
- 
 
- @import "bootstrap/scss/bootstrap";
- @import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
- @import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
- @import "font-awesome";
+@import "bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,700");
+@import "font-awesome";
 
 $white: white;
 $black: black;
+$primary-color: #eb712f;
 
 .navbar {
-        margin-bottom: 0;
-        background: $white;
-        box-shadow: 1px 1px 1px 1px lightgrey;
+  margin-bottom: 0;
+  background: $white;
+  box-shadow: 1px 1px 1px 1px lightgrey;
 }
 .nav-item {
   color: $black;
 }
 body {
-        background: $white;
-        color: $black;
-        font-family: 'Merriweather', sans-serif;
+  background: $white;
+  color: $black;
+  font-family: "Merriweather", sans-serif;
 }
 h1,
 h2 {
-        font-weight: bold;
+  font-weight: bold;
 }
 p {
-        font-size: 16px;
-        color: $black;
+  font-size: 16px;
+  color: $black;
 }
 a:visited {
-        color: $black;
+  color: $primary-color;
 }
 .link {
-        color: $black;
+  color: $black;
 }
 .btn-primary {
-        color: $white;
-        border-color: $white;
-        margin-bottom: 5px;
+  color: $white;
+  border-color: $white;
+  margin-bottom: 5px;
 }
 .btn-sm {
-        background-color: $white;
-        display: inline-block;
+  background-color: $white;
+  display: inline-block;
 }
-img,
-video,
-audio {
-        margin-top: 20px;
-        max-width: 80%;
+.navbar-brand {
+  font-weight: bolder;
+  font-size: 1.6rem;
+  font-family: "Limelight", "cursive";
 }
-caption {
-
-        float: left;
-        clear: both;
-
+.nav-link:hover {
+  color: orangered !important;
+  transition: 1s all ease-out !important;
 }
- .navbar-brand {
-   font-weight: bolder;
-   font-size: 1.6rem;
-   font-family: 'Limelight', 'cursive';
- }
- .nav-link:hover {
-   color: orangered !important;
-   transition: 1s all ease-out !important;
- }
- footer {
-   width: 100%;
-   height: 50px;
-   background-color: brown;
-   display: flex;
-   justify-content: space-between;
-   padding: 10px;
+footer {
+  width: 100%;
+  height: 50px;
+  background-color: rgb(26, 2, 2);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 
-  
-   .footer-logo {
-     color: $white;
-   }
-   p {
-     font-size: 16px;
-   }
-   a {
-     text-decoration: none;
-   }
-   i {
-     font-size: 1.6rem;
-     color: $white;
-   }
- }
-.carousel {
+  .footer-logo {
+    color: $white;
+  }
+  p {
+    font-size: 16px;
+    color: $primary-color;
+  }
+  a {
+    color: $primary-color;
+    text-decoration: none;
+  }
+  i {
+    font-size: 1.6rem;
+    color: $white;
+  }
+}
+.d-block {
+  height: 350px;
   width: 100%;
 }
- .d-block {
-   height: 350px;
-   width: 100%;
- }
- .category-section {
-   width: 100%;
-   height: 50%;
-  //  border: 2px solid black;
-   display: flex;
- }
-   .category-1 {
-     width: 20rem;
-     flex-grow: 2;
-     height: 16rem;
-     border: 1px solid black;
-   
- }
- .category-book {
-   width: 20rem;
-   height: inherit;
- }
- .hero-image {
-   width: 100%;
-   height: 16rem;
- }
+.category-section {
+  width: 100%;
+  height: 50%;
+  display: flex;
+}
+.category-1 {
+  width: 20rem;
+  flex-grow: 2;
+  height: 16rem;
+  border: 1px solid black;
+}
+.category-book {
+  width: 20rem;
+  height: inherit;
+}
+.hero-image {
+  width: 100%;
+  height: 16rem;
+}
+
+.primary-color {
+  color: $primary-color;
+}
+
+.primary-bg-color {
+  background-color: $primary-color;
+}
+
+h1 {
+  color: $primary-color;
+}
+
+.navbar .navbar-brand {
+  color: #36454f;
+}
+
+.navbar .navbar-brand:hover {
+  color: $primary-color;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: $primary-color;
+  text-decoration: underline;
+}
+
+.featured-img {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(11, 11, 13, 0.3),
+      rgba(0, 0, 0, 0.923)
+    ),
+    url("https://images.unsplash.com/photo-1512820790803-83ca734da794?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGJvb2tzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60");
+}
+
+.featured-item {
+  bottom: 0;
+  left: 10px;
+}
+
+.featured-img-height {
+  height: 500px;
+}
+
+.background-img {
+  background-color: #ccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.category-img-height {
+  height: 250px;
+}
+
+.category-name {
+  top: 10px;
+  left: 25px;
+}
+
+.category-title {
+  bottom: 15px;
+  left: 25px;
+}
+h3 {
+  color: $primary-color;
+}
+
+.new_review {
+  width: 100%;
+  height: 80vh;
+  div {
+    width: 40%;
+  }
+}

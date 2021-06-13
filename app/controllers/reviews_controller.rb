@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
-  before_action only: %i[show edit update destroy]
-  # before_action :authenticate_user!
+  before_action only: %i[show]
+  before_action :authenticate_user!
 
 
   # GET /reviews or /reviews.json

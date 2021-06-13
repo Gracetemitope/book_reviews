@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
-  # root to: "reviews#index"
   root 'categories#index'
 
   devise_for :users
-  resources :reviews do
-      resources :votes
-    end
+  #   get '/users/sign_out' => 'devise/sessions#destroy'
+  # end
+
+  resources :reviews 
+  # resources :votes
+  get 'vote/:id', to: 'votes#vote'
+
   # end
   # resources :votes
   resources :categories, only: %i[index show new create edit update]

@@ -1,4 +1,5 @@
-<h1>New Article</h1>
+<h3 class="text-center mt-2">You just finish reading a book?</h3>
+<h5 class="text-center"> Write a Review!</h5>
 <%= form_with(model: @review, local: true) do |form| %>
   <% if @review.errors.any? %>
     <div id="error_explanation">
@@ -12,27 +13,30 @@
       </ul>
     </div>
   <% end %>
+  <div class="new_review align-items-center d-flex flex-column justify-content-between">
+
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.label :title, class: 'form-label'  %>
+    <%= form.text_field :title, class: 'form-control' %>
   </div>
   <div class="field">
     <%= form.label :text %>
-    <%= form.text_field :text %>
+    <%= form.text_field :text, class: "form-control" %>
   </div>
-   <div class="field">
-        <%= form.collection_select :category_id, Category.all, :id, :name, {prompt: "Select Category"}, required: true %>
-    </div>
   <div class="field">
    <%= form.label :image %>
-  <%= form.file_field :image, required: true %>
+  <%= form.file_field :image, required: true, class: 'form-control' %>
         </div>
-  <div class="actions">
-    <%= form.submit %>
+         <div class="field">
+        <%= form.collection_select :category_id, Category.all, :id, :name, {prompt: "Select Category"}, required: true, class: 'form-control' %>
+    </div>
+  <div>
+    <%= form.submit 'Submit Review', class: 'form-control btn primary-bg-color'  %>
   </div>
 <% end %>
-<p class="text-center">If there are no categories to select from, kindly create a new category &#x1F449;
-    <%= link_to 'here', new_category_path, class: 'base-color text-decoration-none' %></p>
+<p class="text-center">
+    <%= link_to 'click to add a new category here', new_category_path, class: 'primary-color text-decoration-none' %></p>
 
+</div>
 
-<%= link_to 'Back', reviews_path %>
+<%# <%= link_to 'Back', reviews_path %>

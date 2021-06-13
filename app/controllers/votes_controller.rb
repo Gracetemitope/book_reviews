@@ -1,27 +1,20 @@
 class VotesController < ApplicationController
+  before_action :authenticate_user!
+  before_action :current_user, only: %i[vote]
 
-  # GET /votes or /votes.json
-  def index
-    @votes = Vote.all
-  end
-
-  def create
-    @vote = current_user.votes.new(review_id: params[:review_id])
-
-    if @like.save
-      redirect_to reviews_path, notice: 'You voted a review.'
+  def vote
+    if Vote.exists?(user_id: @current_user.id, review_id: params[:id])
+      flash[:alert] = 'You already voted this article'
     else
-      redirect_to reviews_path, alert: 'You cannot vote this review.'
-    end
-  end
+      vote = @current_user.votes.build(review_id: params[:id])
 
-  def destroy
-    @vote = Vote.find_by(id: params[:id], user: current_user, review_id: params[:review_id])
-    if like
-      like.destroy
-      redirect_to reviews_path, notice: 'You unvote a review.'
-    else
-      redirect_to reviews_path, alert: 'You cannot unvote review.'
+      if vote.save
+        flash[:notice] = 'Review successfully voted'
+      else
+        flash[:alert] = @review.errors
+      end
     end
+
+    redirect_to review_path
   end
 end

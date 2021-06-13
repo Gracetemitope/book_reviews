@@ -40,7 +40,7 @@ Devise.setup do |config|
 
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is
-  # just :email. You can configure it to use [:username, :subdomain], so for
+  # just :Name. You can configure it to use [:username, :subdomain], so for
   # authenticating a user, both parameters are required. Remember that those
   # parameters are used only when authenticating and not when retrieving from
   # session. If you need permissions, you should implement that in a before filter.
@@ -63,7 +63,7 @@ Devise.setup do |config|
   # Configure which authentication keys should have whitespace stripped.
   # These keys will have whitespace before and after removed upon creating or
   # modifying a user and when used to authenticate or find a user. Default is :email.
-  config.strip_whitespace_keys = [:email]
+  config.strip_whitespace_keys = [:name]
 
   # Tell if authentication through request.params is enabled. True by default.
   # It can be set to an array that will enable params authentication only for the

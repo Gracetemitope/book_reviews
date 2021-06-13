@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_action only: %i[show edit update destroy]
+  before_action only: %i[show]
 
   # GET /categories or /categories.json
   def index
