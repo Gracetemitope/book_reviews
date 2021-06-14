@@ -12,12 +12,12 @@
     "owl.carousel": "^2.3.4",
     "popper.js": "^1.16.1",
     "turbolinks": "^5.2.0",
-    "fortawesome/fontawesome-free": "^4.7.0"
+    "font-awesome-rails": "^4.7.0"
 
   },
   "version": "0.1.0",
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^4.7.0",
+    "font-awesome-rails": "^4.7.0",
     "webpack-dev-server": "^3.11.2"
 
   }
