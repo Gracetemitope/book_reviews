@@ -32,42 +32,54 @@ body {
   background: $white;
   box-shadow: 2px 2px 2px 2px lightgrey;
 }
+
 .nav-item {
-  color: $black;
+  color: #36454f;
 }
 
 h1,
 h2 {
   font-weight: bold;
 }
+
 p {
   font-size: 16px;
   color: $black;
 }
+
 a {
   color: grey;
 }
+
 .link {
   color: $primary-color;
 }
+
 .btn-primary {
   color: $white;
   border-color: $white;
   margin-bottom: 5px;
 }
+
 .btn-sm {
   background-color: $white;
   display: inline-block;
 }
+
 .navbar-brand {
   font-weight: bolder;
   font-size: 1.6rem;
-  font-family: "Limelight", "cursive";
 }
+
+.nav-link {
+  color: grey;
+}
+
 .nav-link:hover {
   color: orangered !important;
   transition: 1s all ease-out !important;
 }
+
 footer {
   width: 100%;
   height: 50px;
@@ -79,38 +91,46 @@ footer {
   .footer-logo {
     color: $white;
   }
+
   p {
     font-size: 16px;
     color: $primary-color;
   }
+
   a {
     color: $primary-color;
     text-decoration: none;
   }
+
   i {
     font-size: 1.6rem;
     color: $white;
   }
 }
+
 .d-block {
   height: 350px;
   width: 100%;
 }
+
 .category-section {
   width: 100%;
   height: 50%;
   display: flex;
 }
+
 .category-1 {
   width: 20rem;
   flex-grow: 2;
   height: 16rem;
   border: 1px solid black;
 }
+
 .category-book {
   width: 20rem;
   height: inherit;
 }
+
 .hero-image {
   width: 100%;
   height: 16rem;
@@ -135,24 +155,15 @@ h1 {
 .navbar .navbar-brand:hover {
   color: $primary-color;
 }
-.nav-item {
-    color: #36454f;
 
-}
-.nav-link {
-  color: grey;
-}
 .navbar-nav .nav-item .nav-link:hover {
   color: $primary-color;
   text-decoration: underline;
 }
 
 .featured-img {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(11, 11, 13, 0.3),
-      rgba(0, 0, 0, 0.923)
-    ),
+  background-image:
+    linear-gradient(to bottom, rgba(11, 11, 13, 0.3), rgba(0, 0, 0, 0.923)),
     url("https://images.unsplash.com/photo-1512820790803-83ca734da794?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGJvb2tzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60");
 }
 
@@ -172,7 +183,6 @@ h1 {
   background-size: cover;
 }
 
-
 h3 {
   color: $primary-color;
 }
@@ -180,10 +190,12 @@ h3 {
 .new_review {
   width: 100%;
   height: 80vh;
+
   div {
     width: 40%;
   }
 }
+
 .category-img-height {
   height: 250px;
 }
