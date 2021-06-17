@@ -29,6 +29,7 @@ gem 'devise', '~> 4.8'
 gem 'figaro'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.7'
 gem 'image_processing', '~> 1.2'
+gem 'rake', '~> 13.0', '>= 13.0.3'
 gem 'shrine', '~> 3.3'
 gem 'shrine-cloudinary', '~> 1.1'
 

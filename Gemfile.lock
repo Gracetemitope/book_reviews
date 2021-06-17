@@ -276,6 +276,7 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.7)
+  rake (~> 13.0, >= 13.0.3)
   sass-rails (>= 6)
   selenium-webdriver
   shrine (~> 3.3)
