@@ -40,6 +40,16 @@ Setup database with:
    rails db:migrate
 ```
 
+Cloudinary API
+```
+Create an env file and include the follow
+CLOUD_NAME="your cloudinary name"
+CLOUD_API_KEY="your cloudinary API key"
+CLOUD_API_SECRET=" your cloudinary secret key"
+
+You'll get the above data from your cloudinary account, If you do not have one, please create one
+
+```
 
 ### Usage
 
@@ -56,8 +66,6 @@ Open `http://localhost:3000/` in your browser.
 ```
     rpsec --format documentation
 ```
-
-
 
 
 ## Authors
