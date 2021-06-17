@@ -7,6 +7,10 @@
 - Ruby v2.7.0
 - Ruby on Rails v5.2.4
 
+## Screenshot of App
+<img width="950" alt="Book Review" src="https://user-images.githubusercontent.com/58818795/122263635-8742a580-ce8b-11eb-8a54-a23235727fd2.png">
+
+
 ## Live Demo
 
 TBA
