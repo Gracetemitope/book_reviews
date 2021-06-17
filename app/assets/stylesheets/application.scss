@@ -13,15 +13,12 @@
  */
 
 @import "bootstrap/scss/bootstrap";
+@import "variables.scss";
 @import "categories.scss";
 @import "reviews.scss";
 @import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Merriweather:400,700");
 @import "font-awesome";
-
-$white: white;
-$black: black;
-$primary-color: #eb712f;
 
 body {
   background: $white;
