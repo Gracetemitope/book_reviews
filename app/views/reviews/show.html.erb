@@ -6,7 +6,6 @@
       <h4 class="fw-bolder"> <%= @review.title %> </h4>
       <p>by <span class="fw-bolder"><%= @review.author.name %></span></p>
 
-      <%# <%= vote_or_unvote_btn(@review) %>
             <%= link_to 'vote', "/vote/#{@review.id}", class: 'btn primary-bg-color text-white mb-3' %>
 
 
