@@ -13,7 +13,7 @@ import { Application } from "stimulus"
 import { definitionsFromContext } from "stimulus/webpack-helpers"
 
 import "bootstrap"
-import "../stylesheets/application";
+// import "../stylesheets/application";
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
 import JQuery from 'jquery';
