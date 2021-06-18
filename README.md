@@ -13,7 +13,7 @@
 
 ## Live Demo
 
-TBA
+https://book-review-time.herokuapp.com/
 
 ## Getting Started
 
