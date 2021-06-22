@@ -1,0 +1,6 @@
+
+            <%= form_with(model: [@review, @review.comments.build], local: true) do |form| %>
+
+ <%= form.text_area :content, id: :comment_content, class: 'form-control mt-3 comment', placeholder: 'Add new Comment' %>
+      <%= form.submit 'Comment', class: 'btn primary-bg-color mt-3 comment mb-3' %>
+            <% end %>

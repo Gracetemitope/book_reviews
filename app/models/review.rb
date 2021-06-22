@@ -8,4 +8,5 @@ class Review < ApplicationRecord
   belongs_to :author, class_name: 'User', foreign_key: :author_id, optional: true
   belongs_to :category
   has_many :votes, dependent: :destroy
+  has_many :comments, dependent: :destroy
 end
