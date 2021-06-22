@@ -9,8 +9,10 @@ RSpec.describe Review, type: :model do
   end
 
   let(:review) do
-    user.reviews.build(title: 'A Title Forever', text: 'Power is Power and there are laws guiding these. Discover them in this book, I did, You too should', image_data: image_data,
-                        category_id: category.id)
+    user.reviews.build(title: 'A Title Forever', text: 'Power is Power and there are laws guiding these.
+    Discover them in this book, I did, You too should',
+                       image_data: image_data,
+                       category_id: category.id)
   end
 
   describe 'validations:' do
@@ -25,8 +27,10 @@ RSpec.describe Review, type: :model do
       it 'must not exceed 100 characters' do
         expect(review).to be_valid
 
-        review.title = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos voluptas labore cum l
-                        aborum laudantium placeat voluptatem ex dolorum voluptatibus possimus!'
+        review.title = 'Lorem Ipsum is simply dummy text of the printing
+         and typesetting industry. Lorem Ipsum has been the industry standard
+         dummy text ever since the 1500s, when an unknown printer took a galley
+        '
         expect(review).to_not be_valid
       end
     end

@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe UsersController, type: :routing do
   describe 'routing' do
-
     it 'routes to #new' do
       expect(get: 'users/sign_up').to route_to('devise/registrations#new')
     end
