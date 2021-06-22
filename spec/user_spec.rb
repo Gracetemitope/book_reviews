@@ -26,6 +26,4 @@ RSpec.describe User, type: :model do
       expect(User.find_by(name: 'David')).not_to eq(@user)
     end
   end
-
-  
 end

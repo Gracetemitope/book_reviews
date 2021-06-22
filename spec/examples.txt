@@ -1,10 +1,21 @@
 example_id                                  | status | run_time        |
 ------------------------------------------- | ------ | --------------- |
-./spec/routes/reviews_routes_spec.rb[1:1:1] | passed | 0.00405 seconds |
-./spec/routes/reviews_routes_spec.rb[1:1:2] | passed | 0.00414 seconds |
-./spec/routes/reviews_routes_spec.rb[1:1:3] | passed | 0.02327 seconds |
-./spec/routes/reviews_routes_spec.rb[1:1:4] | passed | 0.00227 seconds |
-./spec/user_spec.rb[1:1:1]                  | passed | 0.13849 seconds |
-./spec/user_spec.rb[1:1:2]                  | passed | 0.0189 seconds  |
-./spec/user_spec.rb[1:2:1]                  | passed | 0.053 seconds   |
-./spec/user_spec.rb[1:2:2]                  | passed | 0.01119 seconds |
+./spec/review_spec.rb[1:1:1:1]              | passed | 0.015 seconds   |
+./spec/review_spec.rb[1:1:1:2]              | passed | 0.01226 seconds |
+./spec/review_spec.rb[1:1:2:1]              | passed | 0.01332 seconds |
+./spec/review_spec.rb[1:1:3:1]              | passed | 0.0134 seconds  |
+./spec/review_spec.rb[1:1:4:1]              | passed | 0.15449 seconds |
+./spec/review_spec.rb[1:2:1]                | passed | 0.00116 seconds |
+./spec/review_spec.rb[1:2:2]                | passed | 0.00148 seconds |
+./spec/review_spec.rb[1:2:3]                | passed | 0.00565 seconds |
+./spec/routes/reviews_routes_spec.rb[1:1:1] | passed | 0.00238 seconds |
+./spec/routes/reviews_routes_spec.rb[1:1:2] | passed | 0.00193 seconds |
+./spec/routes/reviews_routes_spec.rb[1:1:3] | passed | 0.00211 seconds |
+./spec/routes/reviews_routes_spec.rb[1:1:4] | passed | 0.00174 seconds |
+./spec/routes/users_route_spec.rb[1:1:1]    | passed | 0.02252 seconds |
+./spec/routes/users_route_spec.rb[1:1:2]    | passed | 0.00176 seconds |
+./spec/routes/users_route_spec.rb[1:1:3]    | passed | 0.38508 seconds |
+./spec/user_spec.rb[1:1:1]                  | passed | 0.00955 seconds |
+./spec/user_spec.rb[1:1:2]                  | passed | 0.00812 seconds |
+./spec/user_spec.rb[1:2:1]                  | passed | 0.0089 seconds  |
+./spec/user_spec.rb[1:2:2]                  | passed | 0.00865 seconds |

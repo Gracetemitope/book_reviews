@@ -11,11 +11,11 @@ RSpec.describe ReviewsController, type: :routing do
     end
 
     it 'routes to #destroy' do
-      expect(delete: 'reviews/1').to route_to('reviews#destroy',  id: '1')
+      expect(delete: 'reviews/1').to route_to('reviews#destroy', id: '1')
     end
 
     it 'routes to #show' do
-      expect(get: 'reviews/1').to route_to('reviews#show',  id: '1')
+      expect(get: 'reviews/1').to route_to('reviews#show', id: '1')
     end
   end
 end
