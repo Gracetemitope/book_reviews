@@ -1,0 +1,29 @@
+<div class="sticky-top-padding container-md">
+    <%= flash_message %>
+
+  <section class="row mt-3">
+    <div class="col-12">
+      <h4 class="fw-bolder"> <%= @review.title %> </h4>
+      <p>by <span class="fw-bolder"><%= @review.author.name %></span></p>
+
+            <%= link_to 'vote', "/vote/#{@review.id}", class: 'btn primary-bg-color text-white mb-3' %>
+
+
+      <div style="<%= featured_img(@review.image_url) %>" class="featured-img-height background-img position-relative mb-3">
+      
+      </div>
+
+      <p><%= @review.text %></p>
+    </div>
+  </section>
+
+   
+  </div>
+
+
+           <%= show_comments %>
+
+
+<%= render :partial => 'comment' %>
+   <%# </div> %>
+</div>

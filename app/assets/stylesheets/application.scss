@@ -1,0 +1,153 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+
+@import "bootstrap/scss/bootstrap";
+@import "variables.scss";
+@import "categories.scss";
+@import "reviews.scss";
+@import "comments.scss";
+@import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,700");
+@import "font-awesome";
+
+body {
+  background: $white;
+  color: $black;
+  font-family: "Merriweather", sans-serif;
+}
+
+.navbar {
+  margin-bottom: 5px;
+  background: $white;
+  box-shadow: 2px 2px 2px 2px lightgrey;
+}
+
+.nav-item {
+  color: #36454f;
+}
+
+h1,
+h2 {
+  font-weight: bold;
+}
+
+p {
+  font-size: 16px;
+  color: $black;
+}
+
+a {
+  color: grey;
+}
+
+.link {
+  color: $primary-color;
+}
+
+.btn-primary {
+  color: $white;
+  border-color: $white;
+  margin-bottom: 5px;
+}
+
+.btn-sm {
+  background-color: $white;
+  display: inline-block;
+}
+
+.navbar-brand {
+  font-weight: bolder;
+  font-size: 1.6rem;
+}
+
+.nav-link {
+  color: grey;
+}
+
+.nav-link:hover {
+  color: orangered !important;
+  transition: 1s all ease-out !important;
+}
+
+footer {
+  width: 100%;
+  height: 50px;
+  background-color: rgb(26, 2, 2);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+
+  .footer-logo {
+    color: $white;
+  }
+
+  p {
+    font-size: 16px;
+    color: $primary-color;
+  }
+
+  a {
+    color: $primary-color;
+    text-decoration: none;
+  }
+
+  i {
+    font-size: 1.6rem;
+    color: $white;
+  }
+}
+
+.d-block {
+  height: 350px;
+  width: 100%;
+}
+
+.hero-image {
+  width: 100%;
+  height: 16rem;
+}
+
+.primary-color {
+  color: $primary-color;
+}
+
+.primary-bg-color {
+  background-color: $primary-color;
+}
+
+h1 {
+  color: $primary-color;
+}
+
+.navbar .navbar-brand {
+  color: #36454f;
+}
+
+.navbar .navbar-brand:hover {
+  color: $primary-color;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: $primary-color;
+  text-decoration: underline;
+}
+
+.comment {
+  width: 50%;
+  margin-left: 20%;
+
+  span {
+    font-size: 0.5rem;
+  }
+}
