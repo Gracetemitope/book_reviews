@@ -6,7 +6,7 @@ class Review < ApplicationRecord
   validates :image, presence: true
   validates :category_id, presence: true
   belongs_to :author, class_name: 'User', foreign_key: :author_id, optional: true
-  has_many :categories
+  has_many :category
   has_many :votes, dependent: :destroy
   has_many :comments, dependent: :destroy
 end
